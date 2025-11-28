@@ -1,0 +1,182 @@
+.form-section {
+    padding: 6rem 0 8rem;
+    background-color: var(--color-background);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-background-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.form-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius-lg);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 20px 40px -10px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+    padding: 3rem;
+    overflow: hidden;
+}
+
+.form-header-glass {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.icon-badge-glass {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    color: var(--color-accent);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transform: rotate(-5deg);
+}
+
+.form-header-glass h2 {
+    font-size: 2.25rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.form-header-glass p {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+}
+
+.confession-form-glass {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Floating Labels */
+.input-group-glass {
+    position: relative;
+}
+
+.input-group-glass textarea,
+.input-group-glass input {
+    width: 100%;
+    padding: 1.25rem 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid transparent;
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.2s;
+    resize: vertical;
+}
+
+.input-group-glass textarea:focus,
+.input-group-glass input:focus {
+    outline: none;
+    background: #fff;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.input-group-glass label {
+    position: absolute;
+    left: 1rem;
+    top: 1.25rem;
+    color: var(--color-text-light);
+    pointer-events: none;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+.input-group-glass.active label,
+.input-group-glass textarea:focus~label,
+.input-group-glass input:focus~label {
+    top: -0.6rem;
+    left: 0.8rem;
+    font-size: 0.8rem;
+    background: white;
+    padding: 0 0.4rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.input-with-icon-glass {
+    position: relative;
+}
+
+.input-with-icon-glass input {
+    padding-left: 3rem;
+}
+
+.input-with-icon-glass .label-with-icon {
+    left: 3rem;
+}
+
+.input-with-icon-glass.active .label-with-icon,
+.input-with-icon-glass input:focus~.label-with-icon {
+    left: 0.8rem;
+}
+
+.field-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-light);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.char-count {
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+    margin-top: 0.25rem;
+}
+
+.submit-btn-glass {
+    margin-top: 1rem;
+    padding: 1.25rem;
+    font-size: 1.1rem;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+    box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.submit-btn-glass:hover {
+    box-shadow: 0 15px 25px -5px rgba(37, 99, 235, 0.5);
+    transform: translateY(-1px);
+}
+
+.submit-btn-glass:disabled {
+    opacity: 0.7;
+    transform: none;
+    box-shadow: none;
+}
